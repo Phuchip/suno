@@ -17,7 +17,7 @@
         <!--================Main Header Area =================-->
     <header class="main_header_area">
             <!-- header-top start -->
-      <?php include('include/header-top1.php') ?>
+      <?php include('include/header-top.php') ?>
       <!-- header-top End -->
             <!-- navbar start -->
             <?php include('include/navbar.php') ?>

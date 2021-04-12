@@ -8,7 +8,7 @@
         
         <!-- <link rel="icon" href="img/fav-icon.png" type="image/x-icon" /> -->
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Suno - Shop</title>
+        <title>Suno - Tìm kiếm</title>
 
         <!-- Icon css link -->
         <?php include('include/css.php') ?>
@@ -203,6 +203,9 @@
                                     </form>
 								</div>
         					</aside>
+                            <aside class="left_sidebar">
+                                <span>Có <1> sản phẩm với từ khóa : <br> Phúc đẹp trai </span>
+                            </aside>
         					<aside class="left_sidebar p_catgories_widget">
         						<div class="p_w_title">
         							<h3>Product Categories</h3>

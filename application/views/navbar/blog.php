@@ -48,7 +48,29 @@
         				<div class="main_blog_inner">
 							<div class="blog_item">
 								<div class="blog_img">
-									<img class="img-fluid" src="img/blog/main-blog/blog-1.jpg" alt="">
+									<img class="img-fluid" src="../img/blog/main-blog/blog-1.jpg" alt="">
+								</div>
+								<div class="blog_text">
+									<div class="blog_time">
+										<div class="float-left">
+											<a href="#">08 Feb. 2018</a>
+										</div>
+										<div class="float-right">
+											<ul class="list_style">
+												<li><a href="#">By :  Admin</a></li>
+												<li><a href="#">bekery, sweet</a></li>
+												<li><a href="#">Comments: 8</a></li>
+											</ul>
+										</div>
+									</div>
+									<a href="<?php echo base_url('home/blog_detail') ?>"><h4>This mistaken idea of denouncing pleasure and praising pain</h4></a>
+									<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni do-lores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+									<a class="pink_more" href="<?php echo base_url('home/blog_detail') ?>">Đọc thêm</a>
+								</div>
+							</div>
+							<div class="blog_item">
+								<div class="blog_img">
+									<img class="img-fluid" src="../img/blog/main-blog/blog-2.jpg" alt="">
 								</div>
 								<div class="blog_text">
 									<div class="blog_time">
@@ -70,7 +92,7 @@
 							</div>
 							<div class="blog_item">
 								<div class="blog_img">
-									<img class="img-fluid" src="img/blog/main-blog/blog-2.jpg" alt="">
+									<img class="img-fluid" src="../img/blog/main-blog/blog-3.jpg" alt="">
 								</div>
 								<div class="blog_text">
 									<div class="blog_time">
@@ -92,7 +114,7 @@
 							</div>
 							<div class="blog_item">
 								<div class="blog_img">
-									<img class="img-fluid" src="img/blog/main-blog/blog-3.jpg" alt="">
+									<img class="img-fluid" src="../img/blog/main-blog/blog-4.jpg" alt="">
 								</div>
 								<div class="blog_text">
 									<div class="blog_time">
@@ -114,29 +136,7 @@
 							</div>
 							<div class="blog_item">
 								<div class="blog_img">
-									<img class="img-fluid" src="img/blog/main-blog/blog-4.jpg" alt="">
-								</div>
-								<div class="blog_text">
-									<div class="blog_time">
-										<div class="float-left">
-											<a href="#">08 Feb. 2018</a>
-										</div>
-										<div class="float-right">
-											<ul class="list_style">
-												<li><a href="#">By :  Admin</a></li>
-												<li><a href="#">bekery, sweet</a></li>
-												<li><a href="#">Comments: 8</a></li>
-											</ul>
-										</div>
-									</div>
-									<a href="#"><h4>This mistaken idea of denouncing pleasure and praising pain</h4></a>
-									<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni do-lores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-									<a class="pink_more" href="#">Read more</a>
-								</div>
-							</div>
-							<div class="blog_item">
-								<div class="blog_img">
-									<img class="img-fluid" src="img/blog/main-blog/blog-5.jpg" alt="">
+									<img class="img-fluid" src="../img/blog/main-blog/blog-5.jpg" alt="">
 								</div>
 								<div class="blog_text">
 									<div class="blog_time">
@@ -195,7 +195,7 @@
        							<div class="recent_w_inner">
        								<div class="media">
 										<div class="d-flex">
-											<img src="img/blog/recent-post/r-post-1.jpg" alt="">
+											<img src="../img/blog/recent-post/r-post-1.jpg" alt="">
 										</div>
 										<div class="media-body">
 											<a href="#"><h4>A very bad quack might jinx zippy fowls ...</h4></a>
@@ -204,7 +204,7 @@
 									</div>
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/blog/recent-post/r-post-2.jpg" alt="">
+											<img src="../img/blog/recent-post/r-post-2.jpg" alt="">
 										</div>
 										<div class="media-body">
 											<a href="#"><h4>Big Steps to change management succes...</h4></a>
@@ -213,7 +213,7 @@
 									</div>
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/blog/recent-post/r-post-3.jpg" alt="">
+											<img src="../img/blog/recent-post/r-post-3.jpg" alt="">
 										</div>
 										<div class="media-body">
 											<a href="#"><h4>A paradisematic country, where roasted parts...</h4></a>
@@ -222,7 +222,7 @@
 									</div>
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/blog/recent-post/r-post-4.jpg" alt="">
+											<img src="../img/blog/recent-post/r-post-4.jpg" alt="">
 										</div>
 										<div class="media-body">
 											<a href="#"><h4>A wonderful serenity has taken possession...</h4></a>

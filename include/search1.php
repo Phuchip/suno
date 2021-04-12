@@ -3,7 +3,7 @@
             <div class="search_box_inner">
                 <h3>Tìm kiếm</h3>
                 <div class="input-group">
-                    <form action="">
+                    <?php echo form_open_multipart('home/search');?>
                     <input type="text" class="form-control" placeholder="Nhập từ khóa...">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button"><i class="icon icon-Search"></i></button>

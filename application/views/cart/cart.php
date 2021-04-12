@@ -108,7 +108,7 @@
         						<h4>Total <span>$25.00</span></h4>
         					</div>
         					<div class="cart_footer">
-        						<a class="pest_btn" href="#">Proceed to Checkout</a>
+        						<a class="pest_btn" href="<?php echo base_url('home/checkout') ?>">Thanh Toán</a>
         					</div>
         				</div>
         			</div>

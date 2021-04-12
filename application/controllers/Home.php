@@ -35,6 +35,10 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('cart/cart');
 	}
+	public function checkout()
+	{
+		$this->load->view('cart/checkout');
+	}
 	public function login()
 	{
 		$this->load->view('user/Dang_nhap');
@@ -59,6 +63,18 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('navbar/blog');
 	}
+	public function blog_detail($value='')
+	{
+		$this->load->view('detail/blog-details');
+	}
+	public function shop($value='')
+	{
+		$this->load->view('navbar/shop');
+	}
+	public function product_detail($value='')
+	{
+		$this->load->view('detail/product-details');
+	}
 	public function do_lam_banh()
 	{
 		$this->load->view('product/do_lam_banh');
@@ -74,6 +90,10 @@ class Home extends CI_Controller {
 	public function contact()
 	{
 		$this->load->view('navbar/contact');
+	}
+	public function search($value='')
+	{
+		$this->load->view('detail/search');
 	}
 }
 

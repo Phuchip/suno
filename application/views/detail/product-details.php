@@ -45,7 +45,7 @@
         	<div class="container">
         		<div class="row product_d_price">
         			<div class="col-lg-6">
-        				<div class="product_img"><img class="img-fluid" src="img/product/product-details-1.jpg" alt=""></div>
+        				<div class="product_img"><img class="img-fluid" src="../img/product/product-details-1.jpg" alt=""></div>
         			</div>
         			<div class="col-lg-6">
         				<div class="product_details_text">
@@ -97,7 +97,7 @@
         			<div class="col-lg-3 col-md-4 col-6">
         				<div class="cake_feature_item">
 							<div class="cake_img">
-								<img src="img/cake-feature/c-feature-1.jpg" alt="">
+								<img src="../img/cake-feature/c-feature-1.jpg" alt="">
 							</div>
 							<div class="cake_text">
 								<h4>$29</h4>
@@ -109,7 +109,7 @@
         			<div class="col-lg-3 col-md-4 col-6">
         				<div class="cake_feature_item">
 							<div class="cake_img">
-								<img src="img/cake-feature/c-feature-2.jpg" alt="">
+								<img src="../img/cake-feature/c-feature-2.jpg" alt="">
 							</div>
 							<div class="cake_text">
 								<h4>$29</h4>
@@ -121,7 +121,7 @@
         			<div class="col-lg-3 col-md-4 col-6">
         				<div class="cake_feature_item">
 							<div class="cake_img">
-								<img src="img/cake-feature/c-feature-3.jpg" alt="">
+								<img src="../img/cake-feature/c-feature-3.jpg" alt="">
 							</div>
 							<div class="cake_text">
 								<h4>$29</h4>
@@ -133,7 +133,7 @@
         			<div class="col-lg-3 col-md-4 col-6">
         				<div class="cake_feature_item">
 							<div class="cake_img">
-								<img src="img/cake-feature/c-feature-4.jpg" alt="">
+								<img src="../img/cake-feature/c-feature-4.jpg" alt="">
 							</div>
 							<div class="cake_text">
 								<h4>$29</h4>
