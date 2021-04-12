@@ -8,11 +8,12 @@ class Home extends CI_Controller {
 	parent::__construct();
 	$this->load->model('san_pham/m_san_pham');
 	}
+
 	function index()
 	{
 		// $result['data']=$this->m_san_pham->dispsp1();
 		// $this->load->view('main/index',$result);
-		$this->load->view('main/main');
+		$this->load->view('main/index');
 	}
 	public function main()
 	{
@@ -28,7 +29,7 @@ class Home extends CI_Controller {
 	}
 	public function about()
 	{
-		$this->load->view('navbar/about-us');
+		$this->load->view('navbar/about_us');
 	}
 	public function cart()
 	{

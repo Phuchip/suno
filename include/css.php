@@ -1,3 +1,4 @@
+<link rel="icon" href="../img/fav-icon.png" type="image/x-icon" />
 <!-- Icon css link -->
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../vendors/linearicons/style.css" rel="stylesheet">

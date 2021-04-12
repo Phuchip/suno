@@ -1,21 +1,8 @@
-<div class="main_menu_area">
-				<div class="container">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<a class="navbar-brand" href="index.php">
-						<img src="../img/logo.png" alt="">
-						<img src="../img/logo-2.png" alt="">
-						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="my_toggle_menu">
-                            	<span></span>
-                            	<span></span>
-                            	<span></span>
-                            </span>
-						</button>
+<?php require('include/logo_navbar.php') ?>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav mr-auto">
-								<li class="dropdown submenu active">
-									<a href=" <?php echo base_url('home/index') ?>">Trang chủ</a>
+								<li>
+									<a href=" <?php echo base_url('') ?>">Trang chủ</a>
 								</li>
 								<li><a href="<?php echo base_url('home/cake') ?>">Bánh</a></li>
 								<li><a href="<?php echo base_url('home/menu') ?>">Menu</a></li>
@@ -48,7 +35,7 @@
 								<li class="dropdown submenu">
 									<a href="<?php echo base_url('home/blog') ?>">Blog</a>
 								</li>
-								<li class="dropdown submenu">
+								<li class="dropdown submenu active">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
 									<ul class="dropdown-menu">
 										<li class="dropdown submenu">
