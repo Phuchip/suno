@@ -47,7 +47,7 @@ class Checkout extends CI_Controller {
             // Validate submitted form data
             if($this->form_validation->run() == true){
                 // Insert customer data
-                $insert = $this->product->insertCustomer($custData);
+                $insert = $this->m_san_pham->insertCustomer($custData);
                 
                 // Check customer data insert status
                 if($insert){
@@ -83,7 +83,7 @@ class Checkout extends CI_Controller {
             'customer_id' => $custID,
             'grand_total' => $this->cart->total()
         );
-        $insertOrder = $this->product->insertOrder($ordData);
+        $insertOrder = $this->m_san_pham->insertOrder($ordData);
         
         if($insertOrder){
             // Retrieve cart data from the session
@@ -102,7 +102,7 @@ class Checkout extends CI_Controller {
             
             if(!empty($ordItemData)){
                 // Insert order items
-                $insertOrderItems = $this->product->insertOrderItems($ordItemData);
+                $insertOrderItems = $this->m_san_pham->insertOrderItems($ordItemData);
                 
                 if($insertOrderItems){
                     // Remove items from the cart
@@ -118,7 +118,7 @@ class Checkout extends CI_Controller {
     
     function orderSuccess($ordID){
         // Fetch order data from the database
-        $data['order'] = $this->product->getOrder($ordID);
+        $data['order'] = $this->m_san_pham->getOrder($ordID);
         
         // Load order details view
         $this->load->view($this->controller.'/order-success', $data);
