@@ -54,26 +54,26 @@
 										<li class="dropdown submenu">
 											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Đồ làm bánh</a>
 											<ul class="dropdown-menu">
-												<li><a href="home/shop">Nguyên liệu</a></li>
-												<li><a href="home/shop">Dụng cụ</a></li>
-												<li><a href="home/shop">Dụng cụ</a></li>
-												<li><a href="home/shop">Túi</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Nguyên liệu</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Dụng cụ</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Dụng cụ</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Túi</a></li>
 											</ul>
 										</li>
 										<li class="dropdown submenu"><a href="product-details.php">Đồ nấu ăn</a>
 											<ul class="dropdown-menu">
-												<li><a href="home/shop">Nguyên liệu</a></li>
-												<li><a href="home/shop">Dụng cụ</a></li>
-												<li><a href="home/shop">Dụng cụ</a></li>
-												<li><a href="home/shop">Túi</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Nguyên liệu</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Dụng cụ</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Dụng cụ</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Túi</a></li>
 											</ul>
 										</li>
 										<li class="dropdown submenu"><a href="cart.php">Đồ pha chế</a>
 											<ul class="dropdown-menu">
-												<li><a href="home/shop">Nguyên liệu</a></li>
-												<li><a href="home/shop">Dụng cụ</a></li>
-												<li><a href="home/shop">Dụng cụ</a></li>
-												<li><a href="home/shop">Túi</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Nguyên liệu</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Dụng cụ</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Dụng cụ</a></li>
+												<li><a href="<?php echo base_url('home/shop') ?>">Túi</a></li>
 											</ul>
 										</li>
 									</ul>

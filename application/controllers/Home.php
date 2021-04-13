@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 	{
 	parent::__construct();
 	$this->load->model('san_pham/m_san_pham');
+	$this->load->library('cart');
 	}
 
 	function index()
@@ -30,13 +31,28 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('navbar/about_us');
 	}
+	public function insert($id)
+	{
+		$product = $this->m_san_pham->addcartbyid($id);
+		$data = array(
+        array(
+                'id'      => $product->id_san_pham,
+                'qty'     => 1,
+                'price'   => $product->gia_moi,
+                'name'    => $product->ten_san_pham,
+        )
+    	);
+    	
+		$this->cart->insert($data);
+			redirect('cart/');
+	}
+	public function checkout($value='')
+	{
+		$this->load->view('cart/checkout');
+	}
 	public function cart()
 	{
 		$this->load->view('cart/cart');
-	}
-	public function checkout()
-	{
-		$this->load->view('cart/checkout');
 	}
 	public function login()
 	{

@@ -29,6 +29,14 @@ class M_san_pham extends CI_Model {
 	$result = $query->result_array();
 		return $result;
 	}
+	function addcartbyid($id)
+	{
+		$this->db->WHERE('id_san_pham', $id);
+		return $this->db->get('tbl_san_pham') ->row();
+	// $query=$this->db->query("SELECT * FROM `tbl_san_pham` WHERE `id_san_pham`='".$id."'");
+	// $result = $query->result_array();
+	// 	return $result;
+	}
 	function displayrecordsBysx($sx)
 	{
 	$query=$this->db->query("SELECT * FROM `tbl_ncc` WHERE `id_ncc`='".$sx."'");
@@ -38,8 +46,7 @@ class M_san_pham extends CI_Model {
 	function displayrecordsBylq($pl)
 	{
 	$query=$this->db->query("SELECT * FROM `tbl_san_pham` WHERE `id_loai_san_pham`='".$pl."' limit 4");
-	$result = $query->result_array();
-		return $result;
+	$result = $query->row_array();
 	}
 	function displaynccById($ncc)
 	{
@@ -59,6 +66,23 @@ class M_san_pham extends CI_Model {
 		$result = $query->result_array();
 		return $result;
 	}
+	public function getRows($id = ''){
+        $this->db->select('*');
+        $this->db->from($this->proTable);
+        $this->db->where('status', '1');
+        if($id){
+            $this->db->where('id', $id);
+            $query = $this->db->get();
+            $result = $query->row_array();
+        }else{
+            $this->db->order_by('name', 'asc');
+            $query = $this->db->get();
+            $result = $query->result_array();
+        }
+        
+        // Return fetched data
+        return !empty($result)?$result:false;
+    }
 }
 
 /* End of file m_san_pham.php */

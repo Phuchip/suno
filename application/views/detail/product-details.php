@@ -64,9 +64,10 @@
                 					<p>Giá mới : <span class="price" style="color: red"><?php echo $row['gia_moi']; ?> VNĐ</span></p>
                                     <p><?php echo $row['mo_ta']; ?></p>
                                     <div class="product_details_text">
+                                        <?php echo form_open_multipart('home/addToCart/'.$row['id_san_pham']) ?>
                     					<div class="quantity_box">
                     						<label for="quantity">Số lượng :</label>
-                    						<input type="text" placeholder="1" id="quantity">
+                    						<input type="text" name="number" placeholder="1" id="quantity">
                                             <label for="size">Đơn vị : </label>
                                             <input type="text" name="" id="size" list="exampleList">
                                                 <datalist id="exampleList">
@@ -75,7 +76,8 @@
                                                     <?php endforeach ?>
                                               </datalist>
                     					</div>
-                    					<a class="pink_more" href="cart" type="addcart" class="add-cart" onclick="addCart(<?php echo $row["id_san_pham"]; ?>)">Thêm vào giỏ hàng</a>
+                    					<a class="pink_more" href="<?php echo base_url('Home/insert/'.$row['id_san_pham']); ?>" name="addcart" type="addcart" class="add-cart">Thêm vào giỏ hàng</a>
+                                        <?php echo form_close(); ?>
                 				    </div>
                 			</div>
                 		</div>

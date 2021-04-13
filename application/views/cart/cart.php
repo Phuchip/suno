@@ -32,8 +32,8 @@
         		<div class="banner_text">
         			<h3>Cart</h3>
         			<ul>
-        				<li><a href="index.html">Home</a></li>
-        				<li><a href="cart.html">Cart</a></li>
+        				<li><a href="index.html">Trang chủ</a></li>
+        				<li><a href="cart.html">Giỏ hàng</a></li>
         			</ul>
         		</div>
         	</div>
@@ -56,24 +56,39 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-									<img src="img/product/cart-img.jpg" alt="">
-								</td>
-								<td>Wheel Axel</td>
-								<td>$25.00</td>
-								<td>
-									<select class="product_select">
-										<option data-display="1">1</option>
-										<option value="1">2</option>
-										<option value="2">3</option> 
-										<option value="4">4</option>
-										<option value="5">5</option>
-									</select>
-								</td>
-								<td>$25.00</td>
-								<td>X</td>
-							</tr>
+                            
+                            <!-- <?php var_dump($cartItems);exit(); if($this->cart->total_items() > 0){ foreach($cartItems as $item){    ?> -->
+                                <tr>
+                                <td>
+                                    <img src="img/product/cart-img.jpg" alt="">
+                                </td>
+                                <td>Wheel Axel</td>
+                                <td>$25.00</td>
+                                <td>
+                                    <select class="product_select">
+                                        <option data-display="1">1</option>
+                                        <option value="1">2</option>
+                                        <option value="2">3</option> 
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                                <td>$25.00</td>
+                                <td>X</td>
+                                </tr>
+                                <?php } }else{ ?>
+                                <tr><td colspan="6"><p>Your cart is empty.....</p></td>
+                                <?php } ?>
+                                <?php if($this->cart->total_items() > 0){ ?>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><strong>Cart Total</strong></td>
+                                    <td class="text-right"><strong><?php echo '$'.$this->cart->total().' USD'; ?></strong></td>
+                                    <td></td>
+                                </tr>
+                                <?php } ?>
 							<tr>
 								<td>
 									<form class="form-inline"> 

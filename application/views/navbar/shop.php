@@ -73,7 +73,7 @@
                                     <div class="cake_text">
                                         <h4><?php echo $row->gia_moi; ?></h4>
                                         <a href="product_detail?id=<?php echo $row->id_san_pham; ?>&pl=<?php echo $row->id_loai_san_pham; ?>"><h3><?php echo $row->ten_san_pham; ?></h3></a>
-                                        <a class="pest_btn" href="home/cart">Thêm giỏ hàng</a>
+                                        <a class="pest_btn" href="insert/<?php echo $row->id_san_pham; ?>">Thêm giỏ hàng</a>
                                     </div>
                                 </div>
                             </div>

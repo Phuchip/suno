@@ -19,7 +19,7 @@
 								<li class="dropdown submenu">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tài khoản</a>
 									<ul class="dropdown-menu">
-										<li><a href="<?php echo base_url('home/cart') ?>">Giỏ hàng</a></li>
+										<li><a href="<?php echo base_url('cart/index') ?>">Giỏ hàng</a></li>
 										<li class="dropdown submenu">
 											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Đăng nhập Đăng kí</a>
 											<ul class="dropdown-menu">
@@ -41,26 +41,26 @@
 										<li class="dropdown submenu">
 											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Đồ làm bánh</a>
 											<ul class="dropdown-menu">
-												<li><a href="shop.php">Nguyên liệu</a></li>
-												<li><a href="shop.php">Dụng cụ</a></li>
-												<li><a href="shop.php">Dụng cụ</a></li>
-												<li><a href="shop.php">Túi</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Nguyên liệu</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Dụng cụ</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Dụng cụ</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Túi</a></li>
 											</ul>
 										</li>
 										<li class="dropdown submenu"><a href="product-details.php">Đồ nấu ăn</a>
 											<ul class="dropdown-menu">
-												<li><a href="shop.php">Nguyên liệu</a></li>
-												<li><a href="shop.php">Dụng cụ</a></li>
-												<li><a href="shop.php">Dụng cụ</a></li>
-												<li><a href="shop.php">Túi</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Nguyên liệu</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Dụng cụ</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Dụng cụ</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Túi</a></li>
 											</ul>
 										</li>
 										<li class="dropdown submenu"><a href="cart.php">Đồ pha chế</a>
 											<ul class="dropdown-menu">
-												<li><a href="shop.php">Nguyên liệu</a></li>
-												<li><a href="shop.php">Dụng cụ</a></li>
-												<li><a href="shop.php">Dụng cụ</a></li>
-												<li><a href="shop.php">Túi</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Nguyên liệu</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Dụng cụ</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Dụng cụ</a></li>
+												<li><a href="hhref="<?php echo base_url('home/shop') ?>"">Túi</a></li>
 											</ul>
 										</li>
 									</ul>
