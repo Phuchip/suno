@@ -35,9 +35,15 @@ class M_san_pham extends CI_Model {
 	$result = $query->result_array();
 		return $result;
 	}
-	function displayrecordsBylq($lq)
+	function displayrecordsBylq($pl)
 	{
-	$query=$this->db->query("SELECT * FROM `tbl_san_pham` WHERE `id_phan_loai`='".$lq."'");
+	$query=$this->db->query("SELECT * FROM `tbl_san_pham` WHERE `id_phan_loai`='".$pl."' limit 4");
+	$result = $query->result_array();
+		return $result;
+	}
+	function displaynccById($ncc)
+	{
+	$query=$this->db->query("SELECT * FROM `tbl_ncc` WHERE `id_ncc`='".$ncc."'");
 	$result = $query->result_array();
 		return $result;
 	}

@@ -47,7 +47,49 @@ Table of Content:
   margin: 0px;
   padding: 0px;
 }
-
+#selling-wp .section-detail .list-item .info .price .new{
+    display: inline-block;
+    font-family: 'Roboto Medium';
+    color: #f12a43;
+    margin-right: 5px;
+}
+.price {
+  color: #929292;
+  font-size: 18px;
+  color: #62ab00;
+  font-weight: 600; 
+}
+  @media (min-width: 576px) {
+    .price {
+      font-size: 14px; } }
+  @media (min-width: 1200px) {
+    .price {
+      font-size: 18px; } }
+  .price-old {
+    color: #999999;
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 5px; }
+  .price-discount {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    line-height: 24px;
+    padding: 0 7px;
+    min-width: 46px;
+    background: #bd0018;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 5px;
+    z-index: 3;
+    border-radius: 3px; }
+    @media (min-width: 576px) {
+      .price-discount {
+        line-height: 20px;
+        padding: 0 3px;
+        min-width: 40px; } 
+}
 a {
   text-decoration: none;
   vertical-align: middle;
@@ -5682,10 +5724,11 @@ i:before {
   font-weight: 600;
   color: #242424;
   padding-right: 25px;
+  padding-left: 25px;
 }
 
 .product_details_text .quantity_box input {
-  width: 40px;
+  width: 50px;
   height: 35px;
   border: 1px solid #eaeaea;
   text-align: center;

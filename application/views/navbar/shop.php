@@ -64,114 +64,20 @@
 							</div>
         				</div>
         				<div class="row product_item_inner">
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-1.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="home/cart">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-2.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-3.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-4.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-5.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-6.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-7.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-8.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-9.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
+                            <?php foreach ($data as $row): ?>
+                                <div class="col-lg-4 col-md-4 col-6">
+                                <div class="cake_feature_item">
+                                    <div class="cake_img">
+                                        <img src="<?php echo base_url('image/'.$row->anh) ?>" width="270px" alt="">
+                                    </div>
+                                    <div class="cake_text">
+                                        <h4><?php echo $row->gia_ban; ?></h4>
+                                        <a href="product_detail?id=<?php echo $row->id_sp; ?>&ncc=<?php echo $row->id_ncc; ?>&&pl=<?php echo $row->id_phan_loai; ?>"><h3><?php echo $row->ten_sp; ?></h3></a>
+                                        <a class="pest_btn" href="home/cart">Thêm giỏ hàng</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach ?>
         				</div>
         				<div class="product_pagination">
         					<div class="left_btn">
@@ -230,70 +136,25 @@
         						<div class="p_w_title">
         							<h3>Top Sale Products</h3>
         						</div>
-        						<div class="media">
-        							<div class="d-flex">
-        								<img src="../img/product/sale-product/s-product-1.jpg" alt="">
-        							</div>
-        							<div class="media-body">
-        								<a href="#"><h4>Brown Cake</h4></a>
-        								<ul class="list_style">
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        								</ul>
-        								<h5>$29</h5>
-        							</div>
-        						</div>
-        						<div class="media">
-        							<div class="d-flex">
-        								<img src="../img/product/sale-product/s-product-2.jpg" alt="">
-        							</div>
-        							<div class="media-body">
-        								<a href="#"><h4>Brown Cake</h4></a>
-        								<ul class="list_style">
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        								</ul>
-        								<h5>$29</h5>
-        							</div>
-        						</div>
-        						<div class="media">
-        							<div class="d-flex">
-        								<img src="../img/product/sale-product/s-product-3.jpg" alt="">
-        							</div>
-        							<div class="media-body">
-        								<a href="#"><h4>Brown Cake</h4></a>
-        								<ul class="list_style">
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        								</ul>
-        								<h5>$29</h5>
-        							</div>
-        						</div>
-        						<div class="media">
-        							<div class="d-flex">
-        								<img src="../img/product/sale-product/s-product-4.jpg" alt="">
-        							</div>
-        							<div class="media-body">
-        								<a href="#"><h4>Brown Cake</h4></a>
-        								<ul class="list_style">
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        									<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-        								</ul>
-        								<h5>$29</h5>
-        							</div>
-        						</div>
+                                <?php foreach ($sale as $key): ?>
+                                    <div class="media">
+                                    <div class="d-flex">
+                                        <img src="<?php echo base_url('image/'.$row->anh) ?>" width="104px" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="product_detail?id=<?php echo $row->id_sp; ?>&ncc=<?php echo $row->id_ncc; ?>&&pl=<?php echo $row->id_phan_loai; ?>"><?php echo $row->ten_sp; ?></h4></a>
+                                        <ul class="list_style">
+                                            <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                        </ul>
+                                        <h5><?php echo $row->gia_ban; ?> VNĐ</h5>
+                                    </div>
+                                </div>
+                                <?php endforeach ?>
+        						
         					</aside>
         				</div>
         			</div>
