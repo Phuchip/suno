@@ -33,7 +33,7 @@
         			<h3>Shop</h3>
         			<ul>
         				<li><a href="index.html">Home</a></li>
-        				<li><a href="shop.html">Shop</a></li>
+        				<li><a href="shop.html">Tìm kiếm</a></li>
         			</ul>
         		</div>
         	</div>
@@ -64,114 +64,20 @@
 							</div>
         				</div>
         				<div class="row product_item_inner">
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-1.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="home/cart">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-2.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-3.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-4.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-5.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-6.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-7.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-8.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
-        					<div class="col-lg-4 col-md-4 col-6">
-        						<div class="cake_feature_item">
-									<div class="cake_img">
-										<img src="../img/cake-feature/c-feature-9.jpg" alt="">
-									</div>
-									<div class="cake_text">
-										<h4>140.000</h4>
-										<a href="product_detail"><h3>Strawberry Cupcakes</h3></a>
-										<a class="pest_btn" href="#">Add to cart</a>
-									</div>
-								</div>
-        					</div>
+                            <?php foreach ($data as $row): ?>
+                                <div class="col-lg-4 col-md-4 col-6">
+                                <div class="cake_feature_item">
+                                    <div class="cake_img">
+                                        <img src="<?php echo base_url('image/'.$row['anh_san_pham']) ?>" alt="">
+                                    </div>
+                                    <div class="cake_text">
+                                        <h4><?php echo $row['gia_moi'] ?></h4>
+                                        <a href="home/product_detail?id=<?php echo $row['id_san_pham']; ?>&pl=<?php echo $row['id_loai_san_pham']; ?>"><h3><?php echo $row['ten_san_pham']; ?></h3></a>
+                                        <a class="pest_btn" href="home/cart">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach ?>
         				</div>
         				<div class="product_pagination">
         					<div class="left_btn">
@@ -204,7 +110,8 @@
 								</div>
         					</aside>
                             <aside class="left_sidebar">
-                                <span>Có <1> sản phẩm với từ khóa : <br> Phúc đẹp trai </span>
+                                
+                                    <span>Tìm kiếm sản phẩm với từ khóa : <p style="color: red"><?php echo $key ?></p> </span>
                             </aside>
         					<aside class="left_sidebar p_catgories_widget">
         						<div class="p_w_title">

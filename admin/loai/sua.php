@@ -17,7 +17,6 @@
 		";
 	}
 ;?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,34 +36,37 @@
 		<section class="content">
 			<div class="card">
 				<div class="card-header">
-					<h3 class="card-title">Thêm quản trị viên</h3>
+					<h3 class="card-title">Sửa loại</h3>
 				</div>
-				<!-- /.card-header -->
-				<div class="card-body">
-					<form action="./them_thuc_hien.php" method="POST" enctype="multipart/form-data">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Tên quản trị viên</label>
-									<input name="ad_user" class="form-control" required>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Email</label>
-									<input name="ad_email" type="ad_email" class="form-control" required>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Mật khẩu</label>
-									<input name="ad_password" type="ad_password" class="form-control" required>
-								</div>
-							</div>
+				<?php 
+					// 2. Lẫy ra được ID 
+					$id_loai = $_GET["id"];
+					// secho $id_tin_tuc; exit();
 
-							<div class="col-md-12 text-center">
-								<button type="submit" class="btn btn-primary">Thêm mới</button>
-							</div>
+					// 3. Viết câu lệnh SQL để lấy tin tức có ID như trên
+					$sql = "
+						SELECT *
+						FROM tbl_loai
+						WHERE id_loai='".$id_loai."'
+					";
+
+					// 4. Thực hiện truy vấn để lấy dữ liệu
+					$loai = mysqli_query($ket_noi, $sql);
+					// 5. Hiển thị dữ liệu lên Website
+					$row = mysqli_fetch_array($loai);
+				;?>
+				<!-- /.card-header -->
+							<form action="./sua_thuc_hien.php" method="POST" enctype="multipart/form-data">
+					<p>
+						Tên loại <br>
+						<input type="text" name="txtten_loai" value="<?php echo $row['ten_loai'];?>" style="width: 100%;">
+					</p>
+					
+
+							
+								<button type="submit" class="btn btn-info">Lưu</button>
+							
+							<input type="hidden" name="txtID" value="<?php echo $row['id_loai'];?>">
 						</div>
 					</form>
 				</div>

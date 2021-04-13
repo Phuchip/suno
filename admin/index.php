@@ -12,7 +12,7 @@
         echo 
         "
             <script type='text/javascript'>
-                window.location.href = '/btl/admin/dang_nhap.php'
+                window.location.href = '/suno/admin/dang_nhap.php'
             </script>
         ";
     }
@@ -64,7 +64,7 @@
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
                                 </div>
-                                <a href="/btl/admin/don_hang/danh_sach.php" class="small-box-footer"> Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="/suno/admin/don_hang/danh_sach.php" class="small-box-footer"> Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -79,7 +79,7 @@
                                 <div class="icon">
                                     <i class="ion ion-stats-bars"></i>
                                 </div>
-                                <a href="/btl/admin/bo_su_tap/danh_sach.php" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="/suno/admin/bo_su_tap/danh_sach.php" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -94,7 +94,7 @@
                                 <div class="icon">
                                     <i class="ion ion-person-add"></i>
                                 </div>
-                                <a href="/btl/admin/khach_hang/danh_sach.php" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="/suno/admin/khach_hang/danh_sach.php" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -109,7 +109,7 @@
                                 <div class="icon">
                                     <i class="ion ion-pie-graph"></i>
                                 </div>
-                                <a href="/btl/admin/san_pham/danh_sach.php" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="/suno/admin/san_pham/danh_sach.php" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->

@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	if(!$_SESSION['email']) {
+	if(!$_SESSION['ad_email']) {
 		echo 
 		"
 			<script type='text/javascript'>
@@ -12,7 +12,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.location.href = '/btl/admin/dang_nhap.php'
+				window.location.href = '/suno/admin/dang_nhap.php'
 			</script>
 		";
 	}
@@ -40,20 +40,20 @@
 				</div>
 				<?php 
 					// 2. Lẫy ra được ID 
-					$id_khach_hang = $_GET["id"];
+					$customer_id = $_GET["id"];
 					// secho $id_tin_tuc; exit();
 
 					// 3. Viết câu lệnh SQL để lấy tin tức có ID như trên
 					$sql = "
 						SELECT *
-						FROM tbl_khach_hang
-						WHERE id_khach_hang='".$id_khach_hang."'
+						FROM tbl_customer
+						WHERE customer_id='".$customer_id."'
 					";
 
 					// 4. Thực hiện truy vấn để lấy dữ liệu
-					$khach_hang = mysqli_query($ket_noi, $sql);
+					$customer = mysqli_query($ket_noi, $sql);
 					// 5. Hiển thị dữ liệu lên Website
-					$row = mysqli_fetch_array($khach_hang);
+					$row = mysqli_fetch_array($customer);
 				;?>
 				<!-- /.card-header -->
 				<div class="card-body">
@@ -62,39 +62,39 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Tên</label>
-									<input name="id" class="form-control" type="hidden" required value="<?php echo $row['id_khach_hang'] ?>">
-									<input name="ten_kh" class="form-control" required value="<?php echo $row['ten_kh'] ?>">
+									<label>Tên đăng nhập</label>
+									<input name="id" class="form-control" type="hidden" required value="<?php echo $row['customer_id'] ?>">
+									<input name="cust_username" class="form-control" required value="<?php echo $row['cust_username'] ?>">
 								</div>
-							</div>
+							</div><!-- 
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Tên đăng nhập</label>
-									<input name="username" class="form-control" value="<?php echo $row['username'] ?>" required>
+									<input name="username" class="form-control" value="<?php //echo $row['username'] ?>" required>
 								</div>
-							</div>
+							</div> -->
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Mật khẩu</label>
-									<input name="password" type="password" class="form-control" value="<?php echo $row['password'] ?>" required>
+									<input name="cust_password" type="cust_password" class="form-control" value="<?php echo $row['cust_password'] ?>" required>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Email</label>
-									<input name="email" type="email" class="form-control" value="<?php echo $row['email'] ?>" required>
+									<input name="cust_email" type="email" class="form-control" value="<?php echo $row['cust_email'] ?>" required>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Số điện thoại</label>
-									<input name="sdt" class="form-control" value="<?php echo $row['sdt'] ?>" required>
+									<input name="cust_phone_number" class="form-control" value="<?php echo $row['cust_phone_number'] ?>" required>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Địa chỉ</label>
-									<input name="dia_chi" type="dia_chi" class="form-control" value="<?php echo $row['dia_chi'] ?>"  required >
+									<input name="cust_address" type="dia_chi" class="form-control" value="<?php echo $row['cust_address'] ?>"  required >
 								</div>
 							</div>
 

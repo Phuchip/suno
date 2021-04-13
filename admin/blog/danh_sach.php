@@ -60,7 +60,7 @@
 									<?php echo $row["ngay_viet"];?>
 								</td>
 								<td>
-									<img src="/btl/img/<?php 
+									<img src="/suno/image/<?php 
 											if ($row["anh"]<>"") {
 												echo $row["anh"];
 											} else {

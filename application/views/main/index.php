@@ -61,11 +61,11 @@
                   <div class="item">
                   <div class="cake_feature_item">
                     <div class="cake_img">
-                      <img src="<?php echo base_url('image/'.$row->anh) ?>" alt="">
+                      <img src="<?php echo base_url('image/'.$row->anh_san_pham) ?>" alt="">
                     </div>
                     <div class="cake_text">
-                      <h4><?php echo $row->gia_ban; ?></h4>
-                      <a href="home/product_detail"><h3><?php echo $row->ten_sp; ?></h3></a>
+                      <h4><?php echo $row->gia_moi; ?></h4>
+                      <a href="home/product_detail?id=<?php echo $row->id_san_pham; ?>&pl=<?php echo $row->id_loai_san_pham; ?>"><h3><?php echo $row->ten_san_pham; ?></h3></a>
                       <a class="pest_btn" href="home/cart">Thêm vào giỏ hàng</a>
                     </div>
                   </div>

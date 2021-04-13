@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	if(!$_SESSION['email']) {
+	if(!$_SESSION['ad_email']) {
 		echo 
 		"
 			<script type='text/javascript'>
@@ -12,7 +12,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.location.href = '/btl/admin/dang_nhap.php'
+				window.location.href = '/suno/admin/dang_nhap.php'
 			</script>
 		";
 	}
@@ -22,13 +22,11 @@
 	include('../includes/ket_noi.php');
 
 	// 2. Lẫy dữ liệu để thêm mới tin tức
-	$ten_kh = $_POST["ten_kh"];
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	$email = $_POST["email"];
-	$sdt = $_POST["sdt"];
-	$dia_chi = $_POST["dia_chi"];
-	
+	$cust_username = $_POST["cust_username"];
+	$cust_password = $_POST["cust_password"];
+	$cust_email = $_POST["cust_email"];
+	$cust_phone_number = $_POST["cust_phone_number"];
+	$cust_address = $_POST["cust_address"];
 // echo "<pre>";
 // print_r($_FILES);die;
 	// Lấy ra thông tin ảnh minh họa
@@ -36,8 +34,8 @@
 
 	// 3. Viết câu lệnh SQL để thêm mới tin tức có ID như trên
 	$sql = "
-		INSERT INTO `tbl_khach_hang` (`ten_kh`, `username`, `password`, `email`,`sdt`,`dia_chi`) 
-		VALUES ('".$ten_kh."', '".$username."', '".$password."', '".$email."','".$sdt."','".$dia_chi."'); 
+		INSERT INTO `tbl_customer` (`cust_username`, `cust_password`, `cust_email`,`cust_phone_number`,`cust_address`) 
+		VALUES ('".$cust_username."', '".$cust_password."', '".$cust_email."','".$cust_phone_number."','".$cust_address."'); 
 	";
 
 	// // 4. Thực hiện truy vấn để thêm mới dữ liệu

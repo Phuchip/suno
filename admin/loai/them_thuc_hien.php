@@ -20,22 +20,20 @@
 <?php 
 	// 1. Chuỗi kết nối đến CSDL
 	include('../includes/ket_noi.php');
-	// 2. Lẫy dữ liệu để thêm mới tin tức
 
-	$ten = $_POST["ad_user"];
-	$email = $_POST["ad_email"];
-	$mat_khau = $_POST["ad_password"];
-	
+	// 2. Lẫy dữ liệu để thêm mới tin tức
+	$ten_loai = $_POST["ten_loai"];
+
 	
 // echo "<pre>";
-
 // print_r($_FILES);die;
 	
 
+
 	// 3. Viết câu lệnh SQL để thêm mới tin tức có ID như trên
 	$sql = "
-		INSERT INTO `tbl_admin` (`ad_user`, `ad_email`, `ad_password`) 
-		VALUES ('".$ad_user."', '".$ad_email."', '".$ad_password."'); 
+		INSERT INTO `tbl_loai` (`ten_loai`) 
+		VALUES ('".$ten_loai."'); 
 	";
 
 	// // 4. Thực hiện truy vấn để thêm mới dữ liệu
@@ -47,7 +45,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.alert('Bạn đã thêm quản trị viên thành công.');
+				window.alert('Bạn đã thêm loại sản phẩm thành công.');
 			</script>
 		";
 

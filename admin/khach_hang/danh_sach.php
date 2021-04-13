@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	if(!$_SESSION['email']) {
+	if(!$_SESSION['ad_email']) {
 		echo 
 		"
 			<script type='text/javascript'>
@@ -12,7 +12,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.location.href = '/btl/admin/dang_nhap.php'
+				window.location.href = '/suno/admin/dang_nhap.php'
 			</script>
 		";
 	}
@@ -48,7 +48,6 @@
 						<thead>                  
 						<tr>
 						 	<td>ID</td>
-							<td>Tên</td>
 							<td>username</td>
 							<td>password</td>
 							<td>email</td>
@@ -62,44 +61,41 @@
 							// 2. Viết câu lệnh SQL để lấy ra dữ liệu mong muốn
 							$sql = "
 								SELECT *
-								FROM tbl_khach_hang
-								ORDER BY id_khach_hang DESC
+								FROM tbl_customer
+								ORDER BY customer_id DESC
 							";
 
 							// 3. Thực hiện truy vấn để lấy ra các dữ liệu mong muốn
-							$khach_hang = mysqli_query($ket_noi, $sql);
+							$customer = mysqli_query($ket_noi, $sql);
 
 							// 4. Hiển thị dữ liệu mong muốn
 							$i=0;
-							while ($row = mysqli_fetch_array($khach_hang)) {
+							while ($row = mysqli_fetch_array($customer)) {
 								$i++;
 							?>
 						    <tr>
 						     	<td>
-									<?php echo $row["id_khach_hang"];?>
+									<?php echo $row["customer_id"];?>
 								</td>
 								<td>
-									<?php echo $row["ten_kh"];?>
+									<?php echo $row["cust_username"];?>
 								</td>
 								<td>
-									<?php echo $row["username"];?>
-								</td>
-								<td>
-									<?php echo $row["password"];?>
+									<?php echo $row["cust_password"];?>
 								</td>
 								<td>
 								
-									<?php echo $row["email"];?>
+									<?php echo $row["cust_email"];?>
 								</td>
 								<td>
-									<?php echo $row["sdt"];?>
+									<?php echo $row["cust_phone_number"];?>
 								</td>
 								<td>
-									<?php echo $row["dia_chi"];?>
+									<?php echo $row["cust_address"];?>
 								</td>
 								<td>
-									<a href="sua.php?id=<?php echo $row["id_khach_hang"];?>" class="btn btn-info">Sửa</a>
-									<a href="xoa.php?id=<?php echo $row["id_khach_hang"];?>" class="btn btn-danger">Xóa</a>
+									<a href="sua.php?id=<?php echo $row["customer_id"];?>" class="btn btn-info">Sửa</a>
+									<a href="xoa.php?id=<?php echo $row["customer_id"];?>" class="btn btn-danger">Xóa</a>
 								</td>
 						    </tr>
 						<?php } ?>

@@ -11,7 +11,7 @@ class Home extends CI_Controller {
 
 	function index()
 	{
-		$result['data']=$this->m_san_pham->dispsp1();
+		$result['data']=$this->m_san_pham->dispsp();
 		$this->load->view('main/index',$result);
 	}
 	public function main()
@@ -32,7 +32,6 @@ class Home extends CI_Controller {
 	}
 	public function cart()
 	{
-		var_dump($_POST);exit();
 		$this->load->view('cart/cart');
 	}
 	public function checkout()
@@ -69,18 +68,15 @@ class Home extends CI_Controller {
 	}
 	public function shop()
 	{
-		$result['sale']=$this->m_san_pham->dispsp3();
+		$result['sale']=$this->m_san_pham->dispsp1();
 		$result['data']=$this->m_san_pham->dispsp();
 		$this->load->view('navbar/shop',$result);
 	}
 	public function product_detail($value='')
 	{
 		$id=$this->input->get('id');
-		$ncc=$this->input->get('ncc');
 		$pl=$this->input->get('pl');
-		// var_dump($this->input->get());exit();
 		$result['data']=$this->m_san_pham->displayrecordsById($id);
-		$result['ncc']=$this->m_san_pham->displaynccById($ncc);
 		$result['pl']=$this->m_san_pham->displayrecordsBylq($pl);
 		$this->load->view('detail/product-details',$result);
 	}
@@ -100,10 +96,14 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('navbar/contact');
 	}
-	public function search($value='')
+	public function search()
 	{
-
-		$this->load->view('detail/search');
+		$key=$this->input->post('search_key');
+		$result['key']=$key;
+		$result['count']=$this->m_san_pham->countsearchbykey($key);
+		$result['data']=$this->m_san_pham->searchbykey($key);
+		// var_dump($result['data']);exit();
+		$this->load->view('detail/search',$result);
 	}
 }
 

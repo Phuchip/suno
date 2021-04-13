@@ -59,7 +59,7 @@
 						<div class="form-group">
 							<label>Ảnh</label>
 							<input type="file" name="anh" style="width: 100%;">
-							<img src="../../img/<?php 
+							<img src="../../image/<?php 
 								if ($row["anh"]<>"")
 								{
 									echo $row["anh"];

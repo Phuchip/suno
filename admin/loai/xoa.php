@@ -19,17 +19,17 @@
 ;?>
 <?php 
 	// 1. Chuỗi kết nối đến CSDL
-	include('./includes/ket_noi.php');
+	include('../includes/ket_noi.php');
 
 	// 2. Lẫy ra được ID muốn xóa
-	$customer_id = $_GET["id"];
+	$id_loai = $_GET["id"];
 	// secho $id_tin_tuc; exit();
 
 	// 3. Viết câu lệnh SQL để xóa tin tức có ID như trên
 	$sql = "
 		DELETE
-		FROM tbl_customer
-		WHERE customer_id='".$customer_id."'
+		FROM tbl_loai
+		WHERE id_loai='".$id_loai."'
 	";
 
 	// 4. Thực hiện truy vấn để xóa dữ liệu
@@ -40,7 +40,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.alert('Bạn đã xóa người dùng thành công.');
+				window.alert('Bạn đã xóa loại sản phẩm thành công.');
 			</script>
 		";
 

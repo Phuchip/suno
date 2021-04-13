@@ -12,7 +12,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.location.href = '/btl/admin/dang_nhap.php'
+				window.location.href = '/suno/admin/dang_nhap.php'
 			</script>
 		";
 	}
@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <?php include('../admin/includes/head.php') ?>
+  <?php include('../includes/head.php') ?>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -63,11 +63,11 @@
 							";
 
 							// 3. Thực hiện truy vấn để lấy ra các dữ liệu mong muốn
-							$admin = mysqli_query($ket_noi, $sql);
+							$ad_admin = mysqli_query($ket_noi, $sql);
 
 							// 4. Hiển thị dữ liệu mong muốn
 							$i=0;
-							while ($row = mysqli_fetch_array($admin)) {
+							while ($row = mysqli_fetch_array($ad_admin)) {
 								$i++;
 							?>
 						     <tr>

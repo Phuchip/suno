@@ -12,7 +12,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.location.href = '/btl/admin/dang_nhap.php'
+				window.location.href = '/suno/admin/dang_nhap.php'
 			</script>
 		";
 	}
@@ -80,7 +80,7 @@
 								<tr>
 									<td><?php echo $i;?></td>
 									<td>
-										<img src="/btl/img/<?php 
+										<img src="/suno/image/<?php 
 												if ($row["anh"]<>"") {
 													echo $row["anh"];
 												} else {

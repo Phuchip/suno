@@ -5,7 +5,9 @@
 <script src="/suno/accets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- AdminLTE App -->
-<script src="/suno/accets/admin/js/adminlte.js"></script>
+<script type="text/javascript" src="/suno/accets/admin/js/adminlte.js"></script>
+<script type="text/javascript" src="/suno/accets/admin/css/adminlte.min.css"></script>
+<script type="text/javascript" src="suno/accets/admin/css/adminlte.css"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- <script src="dist/js/pages/dashboard.js"></script> -->
 <!-- AdminLTE for demo purposes -->

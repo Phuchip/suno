@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	if(!$_SESSION['email']) {
+	if(!$_SESSION['ad_email']) {
 		echo 
 		"
 			<script type='text/javascript'>
@@ -12,7 +12,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.location.href = '/btl/admin/dang_nhap.php'
+				window.location.href = '/suno/admin/dang_nhap.php'
 			</script>
 		";
 	}
@@ -22,24 +22,22 @@
 	include('../includes/ket_noi.php');
 
 	// 2. Lẫy dữ liệu để cập nhật tin tức
-	$id_khach_hang = $_POST["id"];
-	$ten_kh = $_POST["ten_kh"];
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	$email = $_POST["email"];
-	$sdt = $_POST["sdt"];
-	$dia_chi = $_POST["dia_chi"];
+	$customer_id = $_POST["customer_id"];
+	$cust_username = $_POST["cust_username"];
+	$cust_password = $_POST["cust_password"];
+	$cust_email = $_POST["cust_email"];
+	$cust_phone_number = $_POST["cust_phone_number"];
+	$cust_address = $_POST["cust_address"];
 
 	$sql = "
-		UPDATE `tbl_khach_hang`
+		UPDATE `tbl_customer`
 		SET
-			`ten_kh` = '".$ten_kh."',
-			`username` = '".$username."',
-			`password` = '".$password."',
-			`email` = '".$email."',
-			`sdt` = '".$sdt."',
-			`dia_chi` = '".$dia_chi."'
-			WHERE `id_khach_hang` = '".$id_khach_hang."' 
+			`cust_username` = '".$cust_username."',
+			`cust_password` = '".$cust_password."',
+			`cust_email` = '".$cust_email."',
+			`cust_phone_number` = '".$cust_phone_number."',
+			`cust_address` = '".$cust_address."'
+			WHERE `customer_id` = '".$customer_id."' 
 		";
 
 	if ($ket_noi->query($sql) === TRUE) {

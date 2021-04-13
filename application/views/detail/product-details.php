@@ -33,7 +33,7 @@
         			<h3>Product Details</h3>
         			<ul>
         				<li><a href="index.html">Home</a></li>
-        				<li><a href="product-details.html">Sản phẩm chi tiết</a></li>
+        				<li><a href="product-details.php">Sản phẩm chi tiết</a></li>
         			</ul>
         		</div>
         	</div>
@@ -43,28 +43,25 @@
         <!--================Product Details Area =================-->
         <section class="product_details_area p_100">
         	<div class="container">
-                <?php foreach ($data as $row): ?>
+                <?php foreach ($data as $row):?>
                     <form action=""></form>
                 		<div class="row product_d_price">
                 			<div class="col-lg-6">
-                				<div class="product_img"><img class="img-fluid" src="<?php echo base_url('image/'.$row['anh']); ?>" alt=""></div>
+                				<div class="product_img"><img class="img-fluid" src="<?php echo base_url('image/'.$row['anh_san_pham']); ?>" alt=""></div>
                 			</div>
                 			<div class="col-lg-6">
                 				<div class="product_details_text">
-                					<h4><?php echo $row['ten_sp'] ?></h4>
+                					<h4><?php echo $row['ten_san_pham'] ?></h4>
                                 </div>
-                                    <p>Nhà sản xuất : <span class="status" style="color: #62ab00"> <?php foreach ($ncc as $key): ?>
-                                        <?php echo $key['ten_ncc'] ?>
-                                    <?php endforeach ?> </p>
-                                    <p>Mã sản phẩm : <span style="color: #62ab00"> <?php echo $row['id_sp']; ?> </span></p>
+                                    <p>Mã sản phẩm : <span style="color: #62ab00"> <?php echo $row['id_san_pham']; ?> </span></p>
                                     <p>Tình trạng : <?php if ($row['so_luong'] > 0): ?>
                                         <span style="color: #62ab00"> Còn hàng</Span>
                                     <?php else: ?>
                                         <span  style="color: red"> Hết hàng</Span>
                                     <?php endif ?>
                                     </p>
-                                    <p>Giá cũ : <del class="price-old"><?php echo $row['gia_ban']; ?> VNĐ</del></p>
-                					<p>Giá mới : <span class="price" style="color: red"><?php echo $row['gia_giam']; ?> VNĐ</span></p>
+                                    <p>Giá cũ : <del class="price-old"><?php echo $row['gia_cu']; ?> VNĐ</del></p>
+                					<p>Giá mới : <span class="price" style="color: red"><?php echo $row['gia_moi']; ?> VNĐ</span></p>
                                     <p><?php echo $row['mo_ta']; ?></p>
                                     <div class="product_details_text">
                     					<div class="quantity_box">
@@ -74,11 +71,11 @@
                                             <input type="text" name="" id="size" list="exampleList">
                                                 <datalist id="exampleList">
                                                     <?php foreach ($data as $row): ?>
-                                                        <option value="<?php echo $row['size'] ?>"><?php echo $row['size'] ?></option>  
+                                                        <option value="<?php echo $row['don_vi'] ?>"><?php echo $row['don_vi'] ?></option>  
                                                     <?php endforeach ?>
                                               </datalist>
                     					</div>
-                    					<a class="pink_more" href="cart" type="addcart" class="add-cart" onclick="addCart(<?php echo $row["id_sp"]; ?>)">Thêm vào giỏ hàng</a>
+                    					<a class="pink_more" href="cart" type="addcart" class="add-cart" onclick="addCart(<?php echo $row["id_san_pham"]; ?>)">Thêm vào giỏ hàng</a>
                 				    </div>
                 			</div>
                 		</div>
@@ -122,11 +119,11 @@
                         <div class="col-lg-3 col-md-4 col-6">
                         <div class="cake_feature_item">
                             <div class="cake_img">
-                                <img src="<?php echo base_url('image/'.$row['anh']); ?>" width="270px" alt="">
+                                <img src="<?php echo base_url('image/'.$row['anh_san_pham']); ?>" width="270px" alt="">
                             </div>
                             <div class="cake_text">
-                                <h4><?php echo $row['gia_giam'] ?></h4>
-                                <h3><?php echo $row['ten_sp'] ?></h3>
+                                <h4><?php echo $row['gia_moi'] ?></h4>
+                                <h3><?php echo $row['ten_san_pham'] ?></h3>
                                 <a class="pest_btn" href="#">Thêm vào giỏ hàng</a>
                             </div>
                         </div>

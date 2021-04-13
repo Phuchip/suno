@@ -68,11 +68,11 @@
                                 <div class="col-lg-4 col-md-4 col-6">
                                 <div class="cake_feature_item">
                                     <div class="cake_img">
-                                        <img src="<?php echo base_url('image/'.$row->anh) ?>" width="270px" alt="">
+                                        <img src="<?php echo base_url('image/'.$row->anh_san_pham) ?>" width="270px" alt="">
                                     </div>
                                     <div class="cake_text">
-                                        <h4><?php echo $row->gia_ban; ?></h4>
-                                        <a href="product_detail?id=<?php echo $row->id_sp; ?>&ncc=<?php echo $row->id_ncc; ?>&&pl=<?php echo $row->id_phan_loai; ?>"><h3><?php echo $row->ten_sp; ?></h3></a>
+                                        <h4><?php echo $row->gia_moi; ?></h4>
+                                        <a href="product_detail?id=<?php echo $row->id_san_pham; ?>&pl=<?php echo $row->id_loai_san_pham; ?>"><h3><?php echo $row->ten_san_pham; ?></h3></a>
                                         <a class="pest_btn" href="home/cart">Thêm giỏ hàng</a>
                                     </div>
                                 </div>
@@ -101,8 +101,8 @@
         				<div class="product_left_sidebar">
         					<aside class="left_sidebar search_widget">
         						<div class="input-group">
-                                    <?php echo form_open_multipart('home/search');?>
-    									<input type="text" class="form-control" placeholder="Enter Search Keywords">
+                                    <form action="search" method="POST">
+    									<input type="text" name="search_key"  class="form-control" placeholder="Nhập từ khóa">
     									<div class="input-group-append">
     										<button class="btn" type="button"><i class="icon icon-Search"></i></button>
     									</div>
@@ -139,10 +139,10 @@
                                 <?php foreach ($sale as $key): ?>
                                     <div class="media">
                                     <div class="d-flex">
-                                        <img src="<?php echo base_url('image/'.$row->anh) ?>" width="104px" alt="">
+                                        <img src="<?php echo base_url('image/'.$row->anh_san_pham) ?>" width="104px" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <a href="product_detail?id=<?php echo $row->id_sp; ?>&ncc=<?php echo $row->id_ncc; ?>&&pl=<?php echo $row->id_phan_loai; ?>"><?php echo $row->ten_sp; ?></h4></a>
+                                        <a href="product_detail?id=<?php echo $row->id_san_pham; ?>&pl=<?php echo $row->id_loai_san_pham; ?>"><?php echo $row->ten_san_pham; ?></h4></a>
                                         <ul class="list_style">
                                             <li><a href="#"><i class="fa fa-star-o"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star-o"></i></a></li>
@@ -150,7 +150,7 @@
                                             <li><a href="#"><i class="fa fa-star-o"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star-o"></i></a></li>
                                         </ul>
-                                        <h5><?php echo $row->gia_ban; ?> VNĐ</h5>
+                                        <h5><?php echo $row->gia_moi; ?> VNĐ</h5>
                                     </div>
                                 </div>
                                 <?php endforeach ?>

@@ -37,7 +37,7 @@
 		<section class="content">
 			<div class="card">
 				<div class="card-header">
-					<h3 class="card-title">Thêm mới khách hàng</h3>
+					<h3 class="card-title">Thêm mới loại</h3>
 				</div>
 				<!-- /.card-header -->
 				<div class="card-body">
@@ -45,34 +45,11 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Tên đăng nhập</label>
-									<input name="cust_username" class="form-control" required>
+									<label>Tên loại </label>
+									<input name="ten_loai" class="form-control" required>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Mật khẩu</label>
-									<input name="cust_password" type="cust_password" class="form-control" required>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Email</label>
-									<input name="cust_email" type="cust_email" class="form-control" required>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Số điện thoại</label>
-									<input name="cust_phone_number" class="form-control" required>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Địa chỉ</label>
-									<input name="cust_address" type="cust_address" class="form-control" required>
-								</div>
-							</div>
+							
 
 							<div class="col-md-12 text-center">
 								<button type="submit" class="btn btn-primary">Thêm mới</button>

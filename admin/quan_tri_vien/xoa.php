@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	if(!$_SESSION['email']) {
+	if(!$_SESSION['ad_email']) {
 		echo 
 		"
 			<script type='text/javascript'>
@@ -12,7 +12,7 @@
 		echo 
 		"
 			<script type='text/javascript'>
-				window.location.href = '/btl/admin/dang_nhap.php'
+				window.location.href = '/suno/admin/dang_nhap.php'
 			</script>
 		";
 	}
